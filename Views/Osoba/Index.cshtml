@@ -1,0 +1,124 @@
+﻿@model IEnumerable<WebShop.Models.Osoba>
+
+@{
+    ViewData["Title"] = "Porudzbina";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Primljena porudzbina</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css">
+    <link href="~/css/site.css" rel="stylesheet" />
+    <style>
+        #spanh1 {
+            color: red;           
+        } 
+        body{ background-color:deepskyblue;}
+    </style>
+</head>
+<body>
+    <div>
+        <center>
+            <h1>Vasa Porudzbina je</h1>
+        </center>
+    </div>
+    <div>
+        <center>
+            <h1 id="h"><span id="spanh1">PRIMLJENA</span>!</h1>
+        </center>
+    </div>
+    <div>
+        <center>
+            <h3>Vasa porudzbina</h3>
+        </center>
+    </div>
+    <div class="container">
+        <div class="row" style="display:flex;flex-direction:column; justify-self:center;align-items:center; position:center;text-align:center; ">
+            <center>
+                <div>
+                    <div id="table1">
+                         
+                        <table class="table table-bordered" style=" background-color:greenyellow;">
+                            <thead>
+                                <tr>
+                                    <th>Naziv artikla:</th>
+                                    <th>Kolicina:</th>
+                                    <th>Cena:</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    
+                                    <td>@Global.proizvod</td>
+                                    <td>@Global.kolicina</td>
+                                    <td>0.00 <br>RSD</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left " colspan="2"><b> Postarina:</b></td>
+                                    <td>0.00 <br> RSD </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left " colspan="2"> <b>Ukupno:</b></td>
+                                    <td class="table-primary">0.00 <br> RSD</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </center>
+        </div>
+        <div style="text-align: center">
+            <div>
+                <p>
+
+                    Hvala vam sto ste izabrali Facebook Shop ZMAJ za vas shoping. Vasa porudzbina je primljena. Placanje je prilikom preuzimanja(sigurna kupovina).
+
+                </p>
+
+            </div>
+            <div>
+                <p>
+
+                    Dostavu vrsi kurirska sluzba ROYAL EXPRESS.
+
+                </p>
+                <p>
+
+                    Isporuka ce biti kroz 4-7 radnih dana.
+
+                </p>
+
+            </div>
+            <div>
+                <p>
+
+                    Ukoliko ne dobijete vasu posiljku ni nakon 7 dana, javite nam se da mozemo proveriti sta se dogobilo.
+
+                </p>
+
+            </div>
+            <div>
+                <p>
+
+                    OBAVEZNO OSTAVITE PRAVI BROJ MOBILNOG TELEFONA, KAKO BI VAS MOGLA KONTAKTIRATI KURIRSKA SLUZBA.
+
+                </p>
+
+            </div>
+            <a href='javascript:history.go(-2)' style="color:greenyellow ;border:solid">klikni ovde da bi se vratio na stranicu sa proizvodima</a>
+        </div>
+
+    </div>
+</body>
+
+</html>
+
+
+
+

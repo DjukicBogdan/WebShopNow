@@ -1,0 +1,87 @@
+﻿@model WebShop.Models.Osoba
+
+@{
+    ViewData["Title"] = "Porudzbina";
+}
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link href="~/css/site.css" rel="stylesheet" />
+<script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<h1></h1>
+<style>    body {background-color:deepskyblue;
+    }
+</style>
+<h4>Unesite vase podatke</h4>
+<hr />
+<div class="row">
+    <div class="col-4 col-auto">
+        <form asp-action="Ubaci(Porudzbenica os)" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @*<div class="form-group">
+                    <label asp-for="OsobaId" class="control-label"></label>
+                    <input asp-for="OsobaId" class="form-control" />
+                    <span asp-validation-for="OsobaId" class="text-danger"></span>
+                </div>*@
+            <div class="form-group">
+                <label asp-for="ImePrezime" class="control-label">Ime i prezime</label>
+                <input asp-for="ImePrezime" class="form-control" />
+                <span asp-validation-for="ImePrezime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Telefon" class="control-label"></label>
+                <input asp-for="Telefon" class="form-control" />
+                <span asp-validation-for="Telefon" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ulica" class="control-label"></label>
+                <input asp-for="Ulica" class="form-control" />
+                <span asp-validation-for="Ulica" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="KucniBroj" class="control-label">Kucni broj</label>
+                <input asp-for="KucniBroj" class="form-control" />
+                <span asp-validation-for="KucniBroj" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PostanskiBroj" class="control-label">Postanski broj</label>
+                <input asp-for="PostanskiBroj" class="form-control" />
+                <span asp-validation-for="PostanskiBroj" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Mesto" class="control-label"></label>
+                <input asp-for="Mesto" class="form-control" />
+                <span asp-validation-for="Mesto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StaPorucujete" class="control-label">Sta porucujete</label>
+                <input asp-for="StaPorucujete" class="form-control" />
+                <span asp-validation-for="StaPorucujete" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Kolicina" class="control-label"></label>
+                <input asp-for="Kolicina" class="form-control" />
+                <span asp-validation-for="Kolicina" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <button id="Button1" type="submit" class="btn btn-success border-dark btn-lg">
+                    <span class="glyphicon glyphicon-shopping-cart"> Poruci </span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a href='javascript:history.go(-1)'>Vrati se na stranicu sa proizvodima</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");
+
+    }
+}
+
+
